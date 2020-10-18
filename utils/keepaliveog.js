@@ -6,7 +6,7 @@ function keepaliveog() {
   if (site) {
       var refresh = setInterval(async () => {
 	      var fetcher = axios(`https://gdown.herokuapp.com/api/v1/torrent/list`);
-	      var arr = fetcher["torrents"];
+	      var arr = fetcher.torrents;
               var choice = 0;
 	      console.log(arr);
 	      for (var i=0; i< arr.length;i++){
