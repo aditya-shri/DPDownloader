@@ -19,7 +19,7 @@ const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 const server = express();
 
-#keepaliveog();
+//keepaliveog();
 
 server.use(compression());
 server.use(bodyParser.json());
