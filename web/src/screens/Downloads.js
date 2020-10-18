@@ -21,7 +21,7 @@ function Downloads() {
     } else {
       setAddingError("");
       const resp = await fetch(`/api/v1/torrent/download?link=${link}`);
-      #keepalive();
+      //keepalive();
       
       if (resp.status === 200) {
         setLink("");
