@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import keepalive from "./keepalive";
+//import keepalive from "./keepalive";
 
 function SearchItem({ result, site, api }) {
   const [loading, setLoading] = useState(false);
