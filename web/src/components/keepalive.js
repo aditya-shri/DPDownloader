@@ -1,6 +1,6 @@
 const axios = require("axios");
 const dev = process.env.NODE_ENV !== "production";
-const site = "https://gdown.herokuapp.com/";
+const site = "https://ggdown.herokuapp.com/";
 
 function keepalive() {
   if (site) {
