@@ -9,7 +9,7 @@ function keepalive() {
 	      var arr = fetcher.torrents;
               var choice = 0;
 	      console.log("Array : ",arr);
-	      console.log(arr.lenght);
+	      console.log(arr.length);
 	      for (var i=0; i< arr.length;i++){
 		 if(arr[i].status == "Downloaded"){
 			 choice += 1;
