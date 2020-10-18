@@ -6,14 +6,15 @@ function keepaliveog() {
   if (site) {
       var refresh = setInterval(async () => {
 	      var fetcher = axios(`https://gdown.herokuapp.com/api/v1/torrent/list`);
-	      var choice = 0;
-	      console.warn(fetcher);
-	      for (var i in fetcher["torrents"]){
-		 if(i.status == "Downloaded"){
+	      var arr = fetcher["torrents"];
+              var choice = 0;
+	      console.warn(arr);
+	      for (var i=0; i< arr.length;i++){
+		 if(arr[i].status == "Downloaded"){
 			 choice += 1;
 		 }
 	      }
-	      if(choice == fetcher["torrents"].length){
+	      if(choice == arr.length && arr.length == 0){
 			console.warn("No download remaining");
 			clearInterval(refresh); 
 	      }
