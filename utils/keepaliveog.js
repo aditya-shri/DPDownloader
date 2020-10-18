@@ -8,18 +8,22 @@ function keepaliveog() {
 	      var fetcher = axios(`https://gdown.herokuapp.com/api/v1/torrent/list`);
 	      var arr = fetcher.torrents;
               var choice = 0;
-	      console.log("Array : ",arr);
-	      console.log(arr.length);
-	      for (var i=0; i< arr.length;i++){
-		 if(arr[i].status == "Downloaded"){
+	      
+	      var keys = Object.keys(fetcher);
+	      
+	      window.console.log("Array : ",arr);
+	      window.console.log(fetcher[keys[1]].length);
+	      
+	      for (var i=0; i< fetcher[keys[1]].length;i++){
+		 if(fetcher[key[1]][i].status == "Downloaded"){
 			 choice += 1;
 		 }
 	      }
-	      if(choice == arr.length || arr.length == 0){
-			console.log("No download remaining");
+	      if(choice == fetcher[keys[1]].length || fetcher[keys[1]].length == 0){
+			window.console.log("No download remaining");
 			clearInterval(refresh); 
 	      }
-	      console.log("setInterval applied");
+	      window.console.log("setInterval applied");
 	      const data = await axios(`https://ping-pong-sn.herokuapp.com/pingback?link=${site}`);
 	      console.log("keep alive triggred, status: ", data.status);
 	    }, 1560000);
