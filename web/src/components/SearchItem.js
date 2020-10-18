@@ -23,7 +23,7 @@ function SearchItem({ result, site, api }) {
   const startDownload = () => {
     const sttr = response.torrent.downloadLink;
     fetch(`/api/v1/torrent/download?link=${sttr}`);
-    #keepalive();	
+    //keepalive();	
   }
   
   const copyToClipboard = () => {
