@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const serveIndex = require("serve-index");
 
 const humanTime = require("./utils/humanTime");
-//const keepaliveog = require("./utils/keepaliveog");
+const keepaliveog = require("./utils/keepaliveog");
 const diskinfo = require("./utils/diskinfo");
 const status = require("./utils/status");
 const { getFiles, sendFileStream, getAuthURL, getAuthToken } = require("./utils/gdrive");
@@ -19,7 +19,7 @@ const PORT = parseInt(process.env.PORT, 10) || 3000;
 
 const server = express();
 
-//keepaliveog();
+keepaliveog();
 
 server.use(compression());
 server.use(bodyParser.json());
