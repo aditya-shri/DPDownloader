@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-//import keepalive from "./keepalive";
+import keepalive from "./keepalive";
 
 function SearchItem({ result, site, api }) {
   const [loading, setLoading] = useState(false);
@@ -23,7 +23,7 @@ function SearchItem({ result, site, api }) {
   const startDownload = () => {
     const sttr = response.torrent.downloadLink;
     fetch(`/api/v1/torrent/download?link=${sttr}`);
-    //keepalive();	
+    keepalive();	
   }
   
   const copyToClipboard = () => {
