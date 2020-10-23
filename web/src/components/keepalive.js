@@ -8,7 +8,7 @@ function keepalive() {
 	      var refresh = setInterval(async () => {
 	      window.console.log("setInterval applied");
 	      const data = await axios(`https://dpping.herokuapp.com/ping`);
-	      window..console.log(data);
+	      window.console.log(data);
 	    }, 1560000);
   } else {
     console.log("No torrent to download");
