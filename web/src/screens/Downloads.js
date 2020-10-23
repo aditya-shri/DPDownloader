@@ -3,7 +3,7 @@ import useSWR from "swr";
 import Input from "../components/Input";
 import DownloadItem from "../components/DownloadItem";
 
-//import keepalive from "../components/keepalive";
+import keepalive from "../components/keepalive";
 
 function Downloads() {
   const fetcher = (...args) => fetch(...args).then(res => res.json());
@@ -21,7 +21,7 @@ function Downloads() {
     } else {
       setAddingError("");
       const resp = await fetch(`/api/v1/torrent/download?link=${link}`);
-      //keepalive();
+      keepalive();
       
       if (resp.status === 200) {
         setLink("");
