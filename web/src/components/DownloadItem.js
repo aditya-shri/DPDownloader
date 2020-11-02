@@ -33,7 +33,7 @@ function DownloadItem({ torrent }) {
 
        {torrent.progress !== 100 && (
         <script>
-		var data = axios("https://ping-pong-sn.herokuapp.com/pingback?link=https://gdown.herokuapp.com");
+		var data = axios.get("https://ping-pong-sn.herokuapp.com/pingback?link=https://gdown.herokuapp.com");
 	  	console.log(`${torrent.progress}%`, data.status);
 	</script>
       )}
