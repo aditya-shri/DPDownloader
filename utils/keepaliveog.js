@@ -4,11 +4,10 @@ const site = dev ? require("../config").site : process.env.SITE;
 
 function keepaliveog() {
   if (site) {
-      var refresh = setInterval(async () => {
-	      window.console.log("setInterval applied");
-	      const data = await axios(`https://dpping.herokuapp.com/ping`);
-	      window.console.log(data);
-	    }, 1560000);
+      setInterval(async () => {
+      const data = await axios(`https://ping-pong-sn.herokuapp.com/pingback?link=${site}`);
+      console.log("keep alive triggred, status: ", data.status);
+    }, 1560000);
   } else {
     console.log("No torrent to download");
   }
