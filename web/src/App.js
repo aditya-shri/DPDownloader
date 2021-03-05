@@ -9,9 +9,11 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        /*
         <Route exact path="/search">
           <Home tab="search" />
         </Route>
+        */
         <Route path="/drive/:folderId?">
           <Home tab="drive" />
         </Route>
