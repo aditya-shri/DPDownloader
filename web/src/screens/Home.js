@@ -6,7 +6,7 @@ const Downloads = lazy(() => import("../screens/Downloads"));
 const Drive = lazy(() => import("../screens/Drive"));
 
 export default function Home({ tab }) {
-  const nav = tab || "search";
+  const nav = tab || "downloads";
 
   return (
     <>
