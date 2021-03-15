@@ -1,5 +1,5 @@
 html,
-body {
+body.light {
   margin: 0px;
   padding: 0px;
   font-size: 1rem;
@@ -24,16 +24,16 @@ body {
   --pagination-text: #8898aa;
   --border-color: #eeeeee;
 }
-body.dark {
+body {
   --color: #f2f2f2;
-  --primary: #3461af;
+  --primary: #400956;
   --success: #2f825e;
   --danger: #c12f4c;
   --warning: #cc593e;
   --muted: #616161;
   --input-bg: #111111;
   --background-color: #080808;
-  --navbar-background: #151515;
+  --navbar-background: #400956;
   --navbar-color: #c9c9c9;
   --navbar-color-hover: #fafafa;
   --main-background-color: #1a1c1d;
