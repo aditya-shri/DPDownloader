@@ -14,9 +14,7 @@ export default function Home({ tab }) {
       <main>
         <div className="content">
           <Suspense fallback={<div className="div-loading" />}>
-            /*
-            {nav === "search" && <Search />}
-            */
+            {/*{nav === "search" && <Search />}*/}
             {nav === "downloads" && <Downloads />}
             {nav === "drive" && <Drive />}
           </Suspense>
