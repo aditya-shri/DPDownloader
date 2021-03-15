@@ -25,6 +25,13 @@ body.light {
   --border-color: #eeeeee;
 }
 body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  font-family: "IBM Plex Sans", sans-serif;
+  z-index: 0;
   --color: #f2f2f2;
   --primary: #400956;
   --success: #2f825e;
