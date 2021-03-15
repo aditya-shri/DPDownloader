@@ -8,7 +8,9 @@ import "./assets/css/navbar.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    //<Navbar />
+    /*
+    <Navbar />
+    */
     <App />
   </React.StrictMode>,
   document.getElementById("root")
